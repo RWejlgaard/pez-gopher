@@ -1,0 +1,26 @@
+# Project Chimera
+
+## What is Chimera
+This is the scientific definition:
+> A \[Chimera\], is a single organism composed of cells with more than one distinct genotype.
+
+How that should be understood in terms of this project are the following:
+“One computing instrument composed of two different devices”.
+I do _all_ my computing using an iPad Pro with a keyboard case and a trackpad. However, I often find that using only the iPad is very limited in design, and just having access to a standard linux shell would be very beneficial.
+
+After having used the iPad for my daily work, I’ve found my groove and come to terms with the quirks and pitfalls of using iPadOS.
+For my daily work as a Platform Engineer at a financial firm, using command-line programs such as terraform, kubectl, helm etc. is a must. If I was unable to use these, I would quickly be made redundant.
+I overcame this challenge by setting up a VM in my personal Google Cloud project. This was met with mixed opinions by the security team when I explained to them how I was working.
+The key points were about the exposed nature of the machine, the network is managed by me and therefore outside of the security teams jurisdiction. In addition, in order to remote into the machine to get an SSH connection the port would have to be open which has the threat of a hacker targeting the machine.
+
+Another drawback to the approach is if I want to do some work while on a plane or otherwise offline. SSH’ing into the machine requires an active internet connection.
+
+The solution I found is using a Rasberry Pi connected directly via a USB-C cable which provides both power for the Pi and data for SSH’ing into it.
+
+## Design
+
+The design is important, the goal is for the Pi to be attached to the outside of the keyboard case. It _has_ to my slim enough to not stand out too much if I’m on a plane or in a coffee shop while working.
+I’ve designed a custom case which is 3D printed and I’ve removed the ethernet jack and USB ports.
+While developing this project I’ve come across the compute module 4 which is basically a raspberry pi 4 model b with all the ports removed. For a second revision of this project I’ll use that along with a custom carrier board with only the USB-C port attached.
+
+
